@@ -7,12 +7,16 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <section class="hero">
-    <div class="hero-content">
-      <h3>Subtitle</h3>
-      <h1>Main Title</h1>
-      <p>A bit of  description here.</p>
-      <a href="#section2">Scroll down</a>
+  <section class="hero" id="section1">
+    <div class="hero-content message">
+        <h1 id="message1">Hi</h1>
+        <h1 id="message2">I'm ChibsDev</h1>
+        <h1 id="message3">Welcome </h1>
+
+        <div class="scroll-div">
+          <h3 id="subMessage"><a href="#section2" onclick="section2Animation()">Scroll down</a> </h3>
+        </div>
+      
     </div>
   </section>
 
@@ -27,10 +31,20 @@
   </header>
 
   <section id="section2" class="content">
-    <div class="box"></div>
-    <div class="box"></div>
+    <div class="box">
+      <div id="content-text">
+        <h3 class="fade-in-righto">My name is Chibu Ihesiene</h3>
+        <h1> This website is 1/3 part of my application for the Founder & Coders Software Development Apprenticeship September 2023 Cohort.</h1>
+        <div class="link-section ">
+          <h3><a href="./about.html">Click here to find out more</a></h3>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <img id="content-img" src="./images/Chibs-bw-test9-removebg-preview.jpg" alt="">
+    </div>
   </section>
-  <section>
+  <section id="section2">
     <!--  content  --> 
   </section>
 
