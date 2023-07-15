@@ -1,5 +1,5 @@
 const header = document.querySelector('header');
-// const heroSection = document.querySelector('.hero');
+
 
 window.addEventListener('scroll', function() {
   var heroSection = document.querySelector('.hero');
@@ -13,25 +13,6 @@ window.addEventListener('scroll', function() {
     header.classList.remove('sticky');
   }
 
-  // try fade in element witth offset height for about content
-
-                                                                    // add fade in for about section in here too
-                                                                    //addEventListener scroll to hero page to scroll section2
-
-
-  // sections.forEach(section => {
-  //   const sectionHeight = section.offsetHeight;
-  //   const blocks = section.querySelectorAll('.block');
-
-  //   blocks.forEach(block => {
-  //     if (sectionHeight <= headerBottom) {
-  //       block.classList.add('fade-in');
-  //       console.log('scroll function active');
-  //     } else {
-  //       block.classList.remove('fade-in');
-  //     }
-  //   });
-  // });
 });
 
 function animateMessages() {
@@ -61,18 +42,45 @@ function animateMessages() {
 window.onload = animateMessages;
 
 function section2Animation() {
-  // var content = document.querySelector('.content');
-  var contentText = document.querySelector('#content-text');
   var contentImg = document.querySelector('#content-img');
+  var contentIntro = document.querySelector('#content-text-intro');
+  var contentMessage = document.querySelector('#content-text-message');
+  var contentLink = document.querySelector('#content-text-link');
   
-  contentText.style.opacity = 0;
+  contentIntro.style.opacity = 0;
   contentImg.style.opacity = 0;
+  contentMessage.style.opacity = 0;
+  contentLink.style.opacity = 0;
 
   setTimeout(function() {
-    contentText.classList.add('add-fade-in');
+    contentIntro.classList.add('fade-left');
+    contentIntro.style.opacity = 1;
     contentImg.classList.add('fade-in-right');
   }, 500); 
+
+  setTimeout(function() {
+    contentMessage.classList.add('add-fade-in');
+  }, 2500);
+
+  setTimeout(function() {
+    contentLink.classList.add('add-fade-in');
+  }, 4000);
+
 }
+
+function aboutPageAnimation() {
+  var blocks = document.querySelectorAll('.block');
+
+  blocks.forEach(function(block) {
+    block.style.opacity = 0;
+    block.classList.remove('pull-up'); 
+
+    setTimeout(function() {
+      block.classList.add('pull-up');
+    }, 500); 
+  });
+}
+
 
 
 
@@ -109,38 +117,16 @@ function smoothScroll(target, duration) {
   }
   
   // Smooth scroll on link click
-  var scrollLink = document.querySelector('a[href^="#"]');
-  scrollLink.addEventListener('click', function (e) {
-    e.preventDefault();
-    var target = scrollLink.getAttribute('href');
-    var duration = 1000; 
-    smoothScroll(target, duration);
+  var scrollLinks = document.querySelectorAll('a[href^="#"]');
+  scrollLinks.forEach(function(scrollLink) {
+    scrollLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      var target = scrollLink.getAttribute('href');
+      var duration = 1000;
+      smoothScroll(target, duration);
+    });
   });
-
-  var sections = document.querySelectorAll('section');
-  var currentSectionIndex = 0;
   
-  function scrollListener() {
-    var currentSection = sections[currentSectionIndex];
-    var nextSection = sections[currentSectionIndex + 1];
-  
-    if (currentSection && nextSection) {
-      var currentSectionHeight = currentSection.offsetHeight;
-      var currentSectionTop = currentSection.getBoundingClientRect().top;
-      var scrollPosition = currentSection.scrollTop;
-  
-      if (scrollPosition >= currentSectionTop + currentSectionHeight) {
-        currentSectionIndex++;
-        var nextSectionId = '#' + nextSection.getAttribute('id');
-        var duration = 1000;
-        smoothScroll(nextSectionId, duration);
-      }
-    }
-  }
-  
-  sections.forEach(function(section) {
-    section.addEventListener('scroll', scrollListener);
-  });
   
 
 
