@@ -29,6 +29,15 @@ section {
   text-align: start;
 }
 
+#content-text-intro {
+  /* border: 1px solid green; */
+}
+
+.typing-div {
+  display: flex;
+  overflow: hidden;
+}
+
 .box {
   flex: 1;
   min-width: 400px;
@@ -129,7 +138,35 @@ footer {
   padding: 20px;
   text-align: center;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: end;
+  /* align-items: center; */
 }
+
+#footer-logo {
+  text-decoration: none;
+}
+
+
+.footer-icons {
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+}
+
+.footer-icons i a {
+  text-decoration: none;
+  transition: transform 3s ease-in;
+
+}
+
+.footer-icons a:hover {
+  transform: scale(1.2); 
+  cursor: pointer;
+}
+
+
 
 .navbar {
   display: flex;
@@ -182,7 +219,7 @@ transform-origin: bottom left;
   font-family: 'Chakra Petch', sans-serif;
     font-size: 42px;
   font-weight: bolder;
-  margin: 1rem 0;
+  margin-top: 1rem;
 }
 
 
@@ -199,6 +236,7 @@ transform-origin: bottom left;
   justify-content: right;
   padding-right: 40px;
   font-family: 'Chakra Petch', sans-serif;
+  overflow: hidden;
 }
 
 
@@ -518,6 +556,38 @@ transform-origin: bottom left;
   }
 } 
 
+.hide {
+  opacity: 0;
+}
+
+
+.typewriter  {
+  overflow: hidden; 
+  border-right: .05rem solid black; 
+  white-space: nowrap; 
+  animation: 
+    typing 1.5s steps(30, end),
+    blink-caret 1s step-end infinite;
+    padding-right: .5em;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 50% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  52% { border-color: black }
+}
+
+.add-drop-in {
+  animation: drop-in 1.5s ease 200ms backwards;
+  animation-iteration-count: 1;
+}
+
 
 /* Media Queries */
 
@@ -544,7 +614,7 @@ transform-origin: bottom left;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 400px;
+      height: 500px;
       width: 80%;
       margin: 0 auto; 
       position: relative;

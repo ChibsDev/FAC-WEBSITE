@@ -47,24 +47,25 @@ function section2Animation() {
   var contentMessage = document.querySelector('#content-text-message');
   var contentLink = document.querySelector('#content-text-link');
   
-  contentIntro.style.opacity = 0;
+  contentIntro.classList.add('hide');
+  contentLink.classList.add('hide');
   contentImg.style.opacity = 0;
   contentMessage.style.opacity = 0;
-  contentLink.style.opacity = 0;
-
+ 
   setTimeout(function() {
-    contentIntro.classList.add('fade-left');
-    contentIntro.style.opacity = 1;
+    contentIntro.classList.remove('hide')
+    contentIntro.classList.add('typewriter');
     contentImg.classList.add('fade-in-right');
   }, 500); 
 
   setTimeout(function() {
     contentMessage.classList.add('add-fade-in');
-  }, 2500);
+  }, 3500);
 
   setTimeout(function() {
-    contentLink.classList.add('add-fade-in');
-  }, 4000);
+    contentLink.classList.remove('hide')
+    contentLink.classList.add('add-drop-in');
+  }, 5000);
 
 }
 
