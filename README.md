@@ -1,6 +1,6 @@
 # FAC Website
 
-The FAC Website is a multi-page website that serves as an application for the Founder & Coders Software Development Apprenticeship September 2023 Cohort. It includes three main pages: `index.html`, `about.html`, and `game.html`. The website provides information about ChibsDev (Chibu Ihesiene), their journey into web development, and features a preview of his game.
+The FAC Website is a multi-page website that serves as an application for the Founder & Coders Software Development Apprenticeship September 2023 Cohort. It includes three main pages: `index.html`, `about.html`, and `game.html`. The website provides information about ChibsDev (Chibu Ihesiene), his journey into web development, and features a preview of his game.
 
 ## Table of Contents
 
