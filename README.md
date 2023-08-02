@@ -1,6 +1,6 @@
 # FAC Website
 
-The FAC Website is a multi-page website that serves as an application for the Founder & Coders Software Development Apprenticeship September 2023 Cohort. It includes three main pages: `index.html`, `about.html`, and `game.html`. The website provides information about ChibsDev (Chibu Ihesiene), their journey into web development, and features a preview of his game.
+The FAC Website is a multi-page website that serves as an application for the Founder & Coders Software Development Apprenticeship September 2023 Cohort. It includes three main pages: `index.html`, `about.html`, and `game.html`. The website provides information about ChibsDev (Chibu Ihesiene), his journey into web development, and features a preview of his game.
 
 ## Table of Contents
 
@@ -12,7 +12,7 @@ The FAC Website is a multi-page website that serves as an application for the Fo
 
 - Home Page (`index.html`): Welcomes visitors and provides a scrollable hero section. It includes a navigation menu and a content section with a link to learn more about Chibs.
 
-- About Page (`about.html`): Details Chibus journey into web development, including his background, learning experiences, and motivations. It includes a video background, navigation menu, and multiple content sections with parallax and smooth scrolling effect. The smooth scrolling is activated using a click to scroll functions as myself and memebers of the FAC meetups couldn't figure out why my animation code wouldnt activate by scroll when I open live server from my editor.
+- About Page (`about.html`): Details Chibus journey into web development, including his background, learning experiences, and motivations. It includes a video background, navigation menu, and multiple content sections with parallax and smooth scrolling effect. The smooth scrolling is activated using a click to scroll functions as a solution could not be foond between Chibu and memebers at the FAC meetups as to  why the animation code wouldnt activate by scroll when on Chibu's live server.
 
 - Game Page (`game.html`): Features a classic snake game where players guide the snake to eat food and grow longer. It provides information about the game's objective, controls, and challenges. The page includes a demonstrastion video, a navigation menu an link to the game itself.
 - 
